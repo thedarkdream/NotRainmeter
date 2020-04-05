@@ -1,0 +1,25 @@
+﻿<src:WidgetWindow x:Class="NotRainmeter.WeatherWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:src="clr-namespace:NotRainmeter"
+        mc:Ignorable="d"
+        Title="WeatherWindow" Height="100" Width="360" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" 
+        WindowStyle="None" Loaded="Window_Loaded" >
+    <Border CornerRadius="15" BorderThickness="5">
+        <Border.Background>
+            <SolidColorBrush Color="Black" Opacity="0.6" />
+        </Border.Background>
+
+        <StackPanel>
+            <Grid>
+                <Label x:Name="tempLabel" Content="0°" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="27" Foreground="White" Margin="250,15,51,-21" Width="49"/>
+                <Label x:Name="townLabel" Content="Sibiu" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Foreground="White" Margin="293,26,21,-12" />
+                <Label x:Name="weather1Label" Content="Cloudy" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Foreground="White" Margin="24,14,216,0" Width="110" />
+                <Label x:Name="weather2Label" Content="Terrible" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Foreground="White" Margin="24,45,100,-31" Width="226" />
+                <Image x:Name="image" Source="{Binding DisplayedImage}" HorizontalAlignment="Center" Height="40" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.317,0.069" Margin="91,5,159,-5"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</src:WidgetWindow>
