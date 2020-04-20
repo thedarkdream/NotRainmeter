@@ -19,7 +19,7 @@ namespace NotRainmeter
     [WidgetAttribute("Coronavirus")]
     public partial class CovidWindow : WidgetWindow
     {
-        public const String URL = "https://corona.lmao.ninja/countries/";
+        public const String URL = "https://corona.lmao.ninja/v2/countries/";
 
         public CovidData CovidData { get; set; }
 
@@ -39,7 +39,14 @@ namespace NotRainmeter
         {
             base.Window_Loaded(sender, e);
 
-            UpdateStatistics();
+            try
+            {
+                UpdateStatistics();
+            }
+            catch(Exception ex)
+            {
+                logger.Error("Error while updating stats", ex);
+            }
 
             myTable.Columns.Add(new System.Windows.Documents.TableColumn());
             myTable.Columns.Add(new System.Windows.Documents.TableColumn());

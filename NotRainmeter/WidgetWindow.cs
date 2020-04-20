@@ -9,7 +9,7 @@ namespace NotRainmeter
 {
     public abstract class WidgetWindow : Window
     {
-        private ILog logger;
+        protected ILog logger;
         public WidgetWindow()
         {
             this.Loaded += Window_Loaded;
